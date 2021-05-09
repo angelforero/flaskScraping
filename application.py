@@ -10,6 +10,9 @@ from ScrapingPage import ScrapingPage
 
 application = Flask(__name__)
 
+scrap = ScrapingPage("https://www.bloomberg.com/graphics/2019-eliminating-african-swine-fever/")
+application.run(debug=True, port=5000)
+
 # Testing Route
 @application.route('/ping', methods=['GET'])
 def ping():
@@ -37,7 +40,8 @@ def getJson():
 def getUrl():
     return jsonify({'url': scrap.getUrl()})
 
-
+"""
 if __name__ == '__main__':
     scrap = ScrapingPage("https://www.bloomberg.com/graphics/2019-eliminating-african-swine-fever/")
     application.run(debug=True, port=5000)
+"""
