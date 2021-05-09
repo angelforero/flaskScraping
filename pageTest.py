@@ -10,11 +10,6 @@ from ScrapingPage import ScrapingPage
 
 scrap = ScrapingPage("https://www.bloomberg.com/graphics/2019-eliminating-african-swine-fever/")
 
-print(scrap.getNameArticle())
-scrap.runScraping()
-jsonResult = scrap.getJson()
-
-print(jsonResult)
 
 def test_name():
     assert scrap.getNameArticle == "none"
